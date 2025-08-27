@@ -84,23 +84,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
-                        'About Me',
-                        style: TextStyle(
-                          fontSize: 32,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      const Center(
-                        child: GlassmorphicProfileImage(),
-                      ),
+                  
+                      // const SizedBox(height: 20),
+                      // const Center(
+                      //   child: GlassmorphicProfileImage(),
+                      // ),
                       const SizedBox(height: 24),
                       const Text(
                         'Rohit Singh\nNew Delhi, India',
                         style: TextStyle(
                           fontSize: 24,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                       const SizedBox(height: 16),
