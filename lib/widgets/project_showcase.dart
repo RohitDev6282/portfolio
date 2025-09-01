@@ -11,8 +11,37 @@ class ProjectShowcase extends StatefulWidget {
 class _ProjectShowcaseState extends State<ProjectShowcase> {
   final List<Map<String, dynamic>> _projects = [
     {
+      'title': 'Smart Gas Weight Measurement System',
+      'description':
+          'IoT-based system for monitoring and measuring the weight of gas cylinders in real-time. Provides alerts and analytics for efficient usage and timely refills. Firmware code was corrected at the end, and a bug in the embedded device was found and fixed within 4 days during delivery time.',
+      'technologies': ['Flutter', 'C++', 'IoT', 'Bluetooth'],
+      'features': [
+        'Automatic Bluetooth device detection and data reading',
+        'Real-time gas weight monitoring and alerts',
+        'Usage analytics and refill notifications',
+        'Multi-platform support (Android, Windows)',
+      ],
+      'link': null,
+    },
+    {
+      'title': 'KeyLogging System for Hotel Reception',
+      'description':
+          'A cross-platform keylogging system tailored for hotel reception desks. Automatically logs key-in and key-out events from devices, creating entry logs for check-in/check-out, guest tracking, and staff attendance. Enhances security and streamlines access management for hospitality environments.',
+      'technologies': ['Flutter', 'C++', 'IoT', 'Bluetooth'],
+      'features': [
+        'Automatic Bluetooth device detection and data reading',
+        'Real-time keystroke and device access monitoring',
+        'Automatic entry log creation for key-in/key-out events',
+        'Supports check-in/check-out, guest tracking',
+        'Usage analytics and activity notifications',
+        'Multi-platform support (Android, Windows)',
+      ],
+      'link': null,
+    },
+    {
       'title': 'Spike Recorder Software',
-      'description': 'Software for visual representation of spike records in graph form. Supports real-time data visualization across multiple platforms.',
+      'description':
+          'Software for visual representation of spike records in graph form. Supports real-time data visualization across multiple platforms.',
       'technologies': ['Flutter', 'C++', 'JavaScript', 'Wasm'],
       'features': [
         'Automatic USB device detection and data reading',
@@ -23,27 +52,30 @@ class _ProjectShowcaseState extends State<ProjectShowcase> {
     },
     {
       'title': 'PCB Testing Software',
-      'description': 'A comprehensive PCB testing solution that communicates with devices to identify and trace errors in PCB boards.',
+      'description':
+          'A comprehensive PCB testing solution that communicates with devices to identify and trace errors in PCB boards.',
       'technologies': ['Flutter', 'Python'],
       'features': [
         'Local storage for tested boards',
         'Error tracking using board identifiers',
         'Interactive point selection',
       ],
+      'link':
+          'https://drive.google.com/file/d/1jUnPBY6Jyh9DpJPnrBQyi0y7TM2ikIRK/view?usp=sharing',
     },
     {
       'title': 'Home Automation App',
-      'description': 'User interface design for a home automation system with intuitive controls.',
+      'description':
+          'User interface design for a home automation system with intuitive controls.',
       'technologies': ['Flutter'],
-      'features': [
-        'Custom UI/UX design',
-        'Intuitive control interface'
-      ],
-      'link': 'https://drive.google.com/drive/folders/1BVanbADl662hCz2LUqv24uYiyt1EVNiK?usp=drive_link',
+      'features': ['Custom UI/UX design', 'Intuitive control interface'],
+      'link':
+          'https://drive.google.com/drive/folders/1BVanbADl662hCz2LUqv24uYiyt1EVNiK?usp=drive_link',
     },
     {
       'title': 'Grain Moisture Log App',
-      'description': 'Weight measurement and logging application for vehicles with cross-platform support.',
+      'description':
+          'Weight measurement and logging application for vehicles with cross-platform support.',
       'technologies': ['Flutter', 'Firebase', 'Firedart'],
       'features': [
         'PDF bill generation and sharing',
@@ -51,11 +83,13 @@ class _ProjectShowcaseState extends State<ProjectShowcase> {
         'Custom key-value pair entries',
         'Windows OS compatibility',
       ],
-      'link': 'https://drive.google.com/drive/folders/18BLtKCcj6ubkWCJG49VZX4HxiTnlN1Hd?usp=sharing',
+      'link':
+          'https://drive.google.com/drive/folders/18BLtKCcj6ubkWCJG49VZX4HxiTnlN1Hd?usp=sharing',
     },
     {
       'title': 'Smart Composter App',
-      'description': 'IoT application for monitoring composter conditions with comprehensive analytics.',
+      'description':
+          'IoT application for monitoring composter conditions with comprehensive analytics.',
       'technologies': ['Flutter', 'ThingSpeak'],
       'features': [
         'Real-time condition monitoring',
@@ -63,11 +97,13 @@ class _ProjectShowcaseState extends State<ProjectShowcase> {
         'Graphical data visualization',
         'Customizable notification system',
       ],
-      'link': 'https://drive.google.com/drive/folders/1Hc5JHMjTn0Zchbb79r0zkas_m-6aBDme?usp=sharing',
+      'link':
+          'https://drive.google.com/drive/folders/1Hc5JHMjTn0Zchbb79r0zkas_m-6aBDme?usp=sharing',
     },
     {
       'title': 'Arctano Solution Website',
-      'description': 'Responsive company portfolio website with interactive animations.',
+      'description':
+          'Responsive company portfolio website with interactive animations.',
       'technologies': ['Flutter', 'Firebase'],
       'features': [
         'Responsive design for all devices',
@@ -206,7 +242,8 @@ class _ProjectCardState extends State<ProjectCard>
                             Wrap(
                               spacing: 8,
                               runSpacing: 8,
-                              children: (widget.project['technologies'] as List<String>)
+                              children: (widget.project['technologies']
+                                      as List<String>)
                                   .map((tech) => Chip(
                                         label: Text(tech),
                                         backgroundColor: Colors.blue.shade100,
@@ -223,11 +260,14 @@ class _ProjectCardState extends State<ProjectCard>
                                 ),
                               ),
                               const SizedBox(height: 8),
-                              ...((widget.project['features'] as List<String>).map(
+                              ...((widget.project['features'] as List<String>)
+                                  .map(
                                 (feature) => Padding(
-                                  padding: const EdgeInsets.symmetric(vertical: 4),
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 4),
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       const Icon(Icons.check_circle,
                                           color: Colors.green, size: 20),
@@ -243,10 +283,12 @@ class _ProjectCardState extends State<ProjectCard>
                               Wrap(
                                 spacing: 8,
                                 runSpacing: 8,
-                                children: (widget.project['platforms'] as List<String>)
+                                children: (widget.project['platforms']
+                                        as List<String>)
                                     .map((platform) => Chip(
                                           label: Text(platform),
-                                          backgroundColor: Colors.purple.shade100,
+                                          backgroundColor:
+                                              Colors.purple.shade100,
                                         ))
                                     .toList(),
                               ),

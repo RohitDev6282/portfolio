@@ -7,6 +7,10 @@ import '../widgets/glassmorphic_profile_image.dart';
 import '../widgets/animated_background.dart';
 import '../widgets/animated_section.dart';
 import '../widgets/animated_skill_bar.dart';
+import '../widgets/development_tools.dart';
+import '../widgets/platform_experience.dart';
+import '../widgets/education.dart';
+import '../widgets/download_resume_button.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -32,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
           controller: _scrollController,
           child: Column(
             children: [
-              // Header Section with Animated Text
+              // Header Section
               Container(
                 height: 200.0,
                 decoration: BoxDecoration(
@@ -84,17 +88,27 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                  
+                      // const Text(
+                      //   'About Me',
+                      //   style: TextStyle(
+                      //     fontSize: 32,
+                      //     fontWeight: FontWeight.bold,
+                      //   ),
+                      // ),
                       // const SizedBox(height: 20),
                       // const Center(
                       //   child: GlassmorphicProfileImage(),
                       // ),
                       const SizedBox(height: 24),
+                      const DownloadResumeButton(
+                        assetPath: 'assets/docs/Rohit_resume.pdf',
+                      ),
+                      const SizedBox(height: 24),
                       const Text(
                         'Rohit Singh\nNew Delhi, India',
                         style: TextStyle(
                           fontSize: 24,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                       const SizedBox(height: 16),
@@ -156,10 +170,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Colors.pink,
                       ),
                       const SizedBox(height: 30),
-                      Wrap(
+                      const Wrap(
                         spacing: 20,
                         runSpacing: 20,
-                        children: const [
+                        children: [
                           AnimatedSkillCard(
                             title: 'Flutter',
                             description: '4 years experience in cross-platform development',
@@ -194,6 +208,33 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
+                ),
+              ),
+
+              // Development Tools Section
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: AnimatedSection(
+                  id: 'tools',
+                  child: const DevelopmentTools(),
+                ),
+              ),
+
+              // Platform Experience Section
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: AnimatedSection(
+                  id: 'platforms',
+                  child: const PlatformExperience(),
+                ),
+              ),
+
+              // Education Section
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: AnimatedSection(
+                  id: 'education',
+                  child: const Education(),
                 ),
               ),
 

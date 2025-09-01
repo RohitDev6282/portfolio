@@ -17,7 +17,8 @@ dependencies:
   visibility_detector: ^0.4.0+2
   flutter_animate: ^4.1.1
   simple_animations: ^5.0.0+3
-  url_launcher: ^6.1.14
+  url_launcher: ^6.3.2
+  syncfusion_flutter_pdfviewer: ^24.2.9
 
 dev_dependencies:
   flutter_test:
@@ -29,6 +30,7 @@ flutter:
 
   assets:
     - assets/
+    - assets/docs/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
