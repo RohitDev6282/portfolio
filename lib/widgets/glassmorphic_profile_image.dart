@@ -1,6 +1,5 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:glassmorphism/glassmorphism.dart';
 
 class GlassmorphicProfileImage extends StatelessWidget {
   const GlassmorphicProfileImage({super.key});

@@ -129,48 +129,48 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               // Skills Section
-              Padding(
-                padding: const EdgeInsets.all(20.0),
+              const Padding(
+                padding: EdgeInsets.all(20.0),
                 child: AnimatedSection(
                   id: 'skills',
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      Text(
                         'Skills & Expertise',
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(height: 30),
-                      const AnimatedSkillBar(
+                      SizedBox(height: 30),
+                      AnimatedSkillBar(
                         skillName: 'Flutter & Dart',
                         progress: 0.9,
                         color: Colors.blue,
                       ),
-                      const AnimatedSkillBar(
+                      AnimatedSkillBar(
                         skillName: 'IoT Development',
                         progress: 0.85,
                         color: Colors.green,
                       ),
-                      const AnimatedSkillBar(
+                      AnimatedSkillBar(
                         skillName: 'Embedded C/C++',
                         progress: 0.8,
                         color: Colors.orange,
                       ),
-                      const AnimatedSkillBar(
+                      AnimatedSkillBar(
                         skillName: 'Firebase & Isar',
                         progress: 0.85,
                         color: Colors.purple,
                       ),
-                      const AnimatedSkillBar(
+                      AnimatedSkillBar(
                         skillName: 'UI/UX Design',
                         progress: 0.75,
                         color: Colors.pink,
                       ),
-                      const SizedBox(height: 30),
-                      const Wrap(
+                      SizedBox(height: 30),
+                      Wrap(
                         spacing: 20,
                         runSpacing: 20,
                         children: [
@@ -212,40 +212,40 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               // Development Tools Section
-              Padding(
-                padding: const EdgeInsets.all(20.0),
+              const Padding(
+                padding: EdgeInsets.all(20.0),
                 child: AnimatedSection(
                   id: 'tools',
-                  child: const DevelopmentTools(),
+                  child: DevelopmentTools(),
                 ),
               ),
 
               // Platform Experience Section
-              Padding(
-                padding: const EdgeInsets.all(20.0),
+              const Padding(
+                padding: EdgeInsets.all(20.0),
                 child: AnimatedSection(
                   id: 'platforms',
-                  child: const PlatformExperience(),
+                  child: PlatformExperience(),
                 ),
               ),
 
               // Education Section
-              Padding(
-                padding: const EdgeInsets.all(20.0),
+              const Padding(
+                padding: EdgeInsets.all(20.0),
                 child: AnimatedSection(
                   id: 'education',
-                  child: const Education(),
+                  child: Education(),
                 ),
               ),
 
               // Projects Section
-              Padding(
-                padding: const EdgeInsets.all(20.0),
+              const Padding(
+                padding: EdgeInsets.all(20.0),
                 child: AnimatedSection(
                   id: 'projects',
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Featured Projects',
                         style: TextStyle(
@@ -261,13 +261,13 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               // Contact Section
-              Padding(
-                padding: const EdgeInsets.all(20.0),
+              const Padding(
+                padding: EdgeInsets.all(20.0),
                 child: AnimatedSection(
                   id: 'contact',
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Get in Touch',
                         style: TextStyle(
